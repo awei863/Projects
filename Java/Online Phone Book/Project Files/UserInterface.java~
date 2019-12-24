@@ -1,0 +1,39 @@
+/**
+ * This is the interface that the user will use to process the Directory
+ * 
+ * @author  
+ * 
+ */
+import java.util.*;
+import java.io.*;
+public class UserInterface
+{
+
+    public static void main(String[] args) throws FileNotFoundException
+    {
+
+        Scanner kbd = new Scanner (System.in);
+        Directory directory = new Directory();
+
+        directory.run();
+
+    }
+    
+/**
+     *  The Directory processing menu
+     */
+    public static void showMenu()
+    {
+        System.out.println("\nMENU:");
+        System.out.println("P - Print a list of all persons in the directory");
+        System.out.println("L - Look up a person's number");
+        System.out.println("R - Create a report with a department phome list");
+        System.out.println("C - Change a listing");
+        System.out.println("A - Add  new Listing");
+        System.out.println("D - Delete a listing");
+        System.out.println();
+        System.out.println("E - Exit");
+
+    }
+}
+

@@ -1,0 +1,311 @@
+
+import java.util.*;
+import java.io.*;
+public class Directory{
+
+    Scanner kbd = new Scanner (System.in);
+    ArrayList <Person> persons = new ArrayList <Person>();
+
+    public void run() throws FileNotFoundException{
+        String firstName;
+        String lastName;
+        String initial;
+        String department;
+        int telNum;
+        String fileName;
+
+        System.out.println("Please enter the input file name");
+        fileName = kbd.nextLine();
+
+        File inFile = new File (fileName);
+        Scanner in = new Scanner (inFile);
+
+        while (in.hasNext()){
+            Person list;
+            lastName = in.next();
+            firstName = in.next();
+            initial = in.next();
+            department = in.next();
+            telNum = in.nextInt();
+            list = new Person(lastName, firstName, initial, department, telNum);
+            persons.add(list);
+        }
+        in.close();
+
+        System.out.println(persons);
+        showMenu();
+        System.out.println("Please choose an option from the menu");
+        char userInput = kbd.next().charAt(0);
+
+        while(userInput != 'e' || userInput != 'E'){
+
+            if (userInput == 'p' || userInput == 'P'){
+                optionP();
+            }
+            else if (userInput == 'l' || userInput == 'L'){
+                optionL();
+            }
+            else if (userInput == 'r' || userInput == 'R'){
+                optionR();
+            }
+            else if (userInput == 'c' || userInput == 'C'){
+                optionC();
+            }
+            else if (userInput == 'a' || userInput == 'A'){
+                optionA();
+            }
+            else if (userInput == 'd' || userInput == 'D'){
+                optionD();
+            }
+            else if (userInput == 'e' || userInput == 'E'){
+                System.out.println ("Thank you for using the Directory System");
+                optionE();
+
+            }
+            else{
+
+                System.out.println("Wrong input, please try again");
+            }
+            showMenu();
+            System.out.println("Please choose an option from the menu");
+            userInput = kbd.next().charAt(0);
+        }
+    }
+
+    public void showMenu()
+    {
+        System.out.println("\nMENU:");
+        System.out.println("P - Print a list of all persons in the directory");
+        System.out.println("L - Look up a person's number");
+        System.out.println("R - Create a report with a department phome list");
+        System.out.println("C - Change a listing");
+        System.out.println("A - Add  new Listing");
+        System.out.println("D - Delete a listing");
+        System.out.println();
+        System.out.println("E - Exit");
+
+    }
+
+    public void optionP(){
+        System.out.println("Fly By Night Consulting");
+        System.out.println("Name            Department         Telephone Number");
+        int i;
+        i = 0;
+        while (i < persons.size()){
+            System.out.println(persons.get(i).toString());
+            i++;
+        }
+        System.out.println(persons);
+    }
+
+    public int searchLastName (String lastName){
+        int i;
+        boolean found = false;
+        int index;
+
+        i = 0;
+        index = -1;
+
+        while (i < persons.size() && !found){
+            if (lastName.equalsIgnoreCase (persons.get(i).getLastName())){
+                index = i;
+                found = true;
+            }
+            i++;
+        }
+        return index;
+    }
+
+    public void notFoundMsg(){
+        System.out.println("Employee not found");
+    }
+
+    public void optionL(){
+        String lastName;
+        System.out.println("Please enter a last name for the person's information");
+        lastName = kbd.next();
+        int index = searchLastName(lastName);
+        if (index < 0){
+            notFoundMsg();
+        }
+        else{
+            System.out.println(persons.get(index).toString());   
+        }
+
+    }
+
+    public int searchDepartment (String department){
+        int i;
+        boolean found = false;
+        int index;
+
+        i = 0;
+        index = -2;
+
+        while (i < persons.size() && !found){
+            if (department.equalsIgnoreCase (persons.get(i).getDepartment())){
+                index = i;
+                found = true;
+            }
+            i++;
+        }
+        return index;
+    }
+
+    public void optionR() throws FileNotFoundException{ 
+
+        String department;
+        String lastName;
+        String answer;
+        String fileName;
+        int indexLN;
+        int indexDpt;
+
+        System.out.println("Please enter the name of the department");
+        department = kbd.next();
+        System.out.println("Please enter the last name of the employee");
+        lastName = kbd.next();
+
+        indexLN = searchLastName(lastName);
+        indexDpt = searchDepartment(department);
+        if(indexLN == indexDpt){
+            System.out.println("Where would you like the report be written to (File or Screen)?");
+            answer = kbd.next();
+
+            if (answer.equals("File")){
+                System.out.println("Please enter a name for the file to which the report should be written to");
+                fileName = kbd.next();
+                PrintWriter out = new PrintWriter(fileName);
+                out.println(department + " department");
+
+                out.println(persons.get(indexLN).toOptionR());
+
+                out.close();
+
+            }
+            else {
+                System.out.println(persons.get(indexLN).toOptionR());
+            }
+        }
+        else{
+            System.out.println("The employee you are looking for is not in the requested department");
+        }
+    }
+
+    public void optionC(){
+        String lastName;
+        char departAns;
+        char phoneAns;
+        String departChange;
+        int phoneChange;
+        int index;
+
+        System.out.println("Please enter a last name for the person's information");
+        lastName = kbd.next();
+        index = searchLastName(lastName);
+        if (index < 0){
+            notFoundMsg();
+        }
+        else{
+            System.out.println(persons.get(index).toString());   
+        }
+
+        System.out.println("Do you wish to change the department (Y or N)?");
+        departAns = kbd.next().charAt(0);
+
+        if (departAns == 'Y'){
+            System.out.println("What would you like to change it to?");
+            departChange = kbd.next();
+            persons.get(index).setDepartment(departChange);
+        }
+
+        System.out.println("Do you wish to change the local phone number (Y or N)?");
+        phoneAns = kbd.next().charAt(0);
+
+        if (phoneAns == 'Y'){
+            System.out.println("What would you like to change it to?");
+            phoneChange = kbd.nextInt();
+            persons.get(index).setTelNum(phoneChange);
+        }
+        System.out.println(persons);
+    }
+
+    public void optionA(){
+        Person one;
+        String lastName;
+        String firstName;
+        String initial;
+        String department;
+
+        int telNum;
+        int index;
+        int size;
+
+        System.out.println("Please enter a last name to add into directory");
+        lastName = kbd.next();
+        index = searchLastName(lastName);
+
+        if (index < 0){
+            System.out.println("Please enter first name");
+            firstName = kbd.next();
+
+            System.out.println("Please enter initial");
+            initial = kbd.next();
+
+            System.out.println("Please enter department");
+            department = kbd.next();
+
+            System.out.println("Please enter local phone number");
+            telNum = kbd.nextInt();
+
+            one = new Person(lastName, firstName, initial, department, telNum);
+
+            persons.add(one);
+
+        }
+        else{
+            System.out.println("This name is already in the directory, please try again");
+        }
+
+        System.out.println(persons);
+    }
+
+    public void optionD(){
+        String lastName;
+        int index;
+
+        System.out.println("Please enter a last name to remove from directory");
+        lastName = kbd.next();
+        index = searchLastName(lastName);
+
+        if (index < 0){
+            System.out.println("The person you are looking for is not found");
+        }
+        else {
+            persons.remove(index);
+        }   
+        System.out.println(persons);
+    }
+
+    public void optionE()throws FileNotFoundException{
+        int i;
+        String fileName;
+
+        System.out.println("Please enter an updated fileName");
+        fileName = kbd.nextLine();
+
+        PrintWriter out = new PrintWriter(fileName);
+        out.println("Fly By Night Consulting");
+        out.println("Name            Department         Telephone Number");
+
+        i = 0;
+        while (i < persons.size()){        
+            out.println(persons.get(i).toString());
+            i++;
+        }
+
+        out.close();
+        System.exit(0);
+    }
+
+}

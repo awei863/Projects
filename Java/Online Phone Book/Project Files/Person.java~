@@ -1,0 +1,81 @@
+/**
+ * This is the class that defines the Person included in the Directory 
+ * 
+ * @author 
+ * 
+ */
+public class Person{
+
+    // Instance Variables
+    private String lastName;
+    private String firstName;
+    private String initial;
+    private String department;
+    private int telNum;
+
+    // Constructor
+
+    public Person (String lastN, String firstN, String intl, String departm, int tel){
+        lastName = lastN;
+        firstName = firstN;
+        initial = intl;
+        department = departm;
+        telNum = tel;
+    }
+
+    // Accessors
+    public String getLastName(){
+        return lastName;
+    }
+
+    public String getFirstName(){
+        return firstName;
+    }
+
+    public String getInitial(){
+        return initial;
+    }
+
+    public String getDepartment(){
+        return department;
+    }
+
+    public double getTelNum(){
+        return telNum;
+    }
+
+    // Mutators
+    public void setLastName (String lastN){
+        lastName = lastN;
+    }
+
+    public void setFirstName (String firstN){
+        firstName = firstN;
+    }
+
+    public void setInitial (String intl){
+        initial = intl;
+    }
+
+    public void setDepartment (String departm){
+        department = departm;
+    }
+
+    public void setTelNum (int tel){
+        telNum = tel;
+    }
+
+    // Place processing methods here (if any)
+
+    // Place print and toString methods here
+    public String toString(){
+        return String.format("%s %s. %s\t%-10s\t   %-10d", firstName, initial, lastName, department, telNum);
+    }
+
+    public String toOptionR(){
+        String text;
+        text = firstName + " " + initial + "." + " " + lastName + " " + telNum;
+        return text;
+    }
+
+}
