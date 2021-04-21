@@ -1,0 +1,1 @@
+Use Microsoft Project to open project schedule
