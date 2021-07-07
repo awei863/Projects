@@ -1,5 +1,5 @@
-This is a group project website in which my duties were to create the login and signup page
+This is a project that I've done in school in which the user gets to choose their 
+desired country/city to view photos of.
 
-This coding project is mainly focused on functionality rather than appearance
-
-Please look into code if you wish to access it
+Mainly focused on functionality rather than appearance
+Please look into my code if you wish to assess it, thanks.
