@@ -1,0 +1,400 @@
+//2:18
+
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+$primary: rgb(255, 136, 0);
+$gray: #E6E6E6;
+$primaryLight: rgba($primary, 0.2);
+
+.announcement-bar{
+    font-size: 0.8rem;
+    border-bottom: 1px solid $gray;
+    &__list{
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: inline-flex;
+        margin: 0 -10px;
+        li{
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            .bi{
+                background-color: $primaryLight;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                margin-right: 6px;
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        display: none;
+    }
+}
+
+.search{
+    input{
+        width: 100%;
+        border-radius: 20px;
+        border: 1px solid gray;
+        padding: 10px 20px 10px 20px;
+    }
+    input:focus{
+        outline: none;
+    }
+  
+}
+
+#main-nav{
+    font-weight: 600;
+    background-color: $primary;
+    font-size: 20px;
+    ul{
+        li{
+            margin-right: 15px;
+            margin-left: 15px;
+            // &.current_page_item{
+            //     a{
+            //         background-color: orange;
+            //         border-radius: 5px;
+            //     }
+                
+            // }
+            a{
+                color: white;
+                padding: 0.4rem 1.4rem;
+            }
+            a:hover{
+                background-color: orange;
+                border-radius: 5px;
+            }
+        }
+    }
+    .navbar-toggler{
+        //background-color: orange;
+        color: white;
+        border: none;
+        
+    }
+}
+
+.home-banner{
+    
+    .container{
+        
+        .row{
+            height: 500px;
+            background-size: cover;
+            background-image: url('../img/kitty-banner-2.jpg');
+            @media only screen and (max-width: 990px){
+                margin-left: -450px;
+            }
+            .message-container{
+                background-color: $primary;  
+                // background-image: url('../img/orange.jpg');
+                // background-size: cover;  
+                   
+                border-top-right-radius: 200px;
+                border-bottom-right-radius: 300px;
+                @media only screen and (max-width: 990px){
+                    display: none;
+                    
+                }
+                
+                .message{
+                    padding-top: 150px;
+                    padding-left: 50px;
+                    color: white;
+                    font-weight: 700;
+                   
+                    
+                    h1{
+                        font-size: 36px;
+                        font-weight: 800;
+                        
+                    }
+                    p{
+                       
+                    }
+                    button{
+                        font-weight: 500;
+                        margin-top: 50px;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        width: 150px;
+                        position: relative;
+                        display:inline-block;
+                        border: none;
+                        border-radius: 5px;
+                        background-color: white;
+                        color: $primary;
+                        &:hover{
+                            background-color: orange;
+                            color: white;
+                        }
+                    }
+                }
+                
+            }
+            .discount-container{
+                display: inline-flex;
+                justify-content: flex-end;
+                margin-top: 20px;
+                @media only screen and (max-width: 990px){
+                    margin-left: 450px;
+                }
+                
+                .discount{
+                    background-color: red;
+                    display: flex;
+                    height: 150px;
+                    width: 150px;
+                    align-items: center;
+                    
+                    font-weight: 700;
+                    
+                    .container{
+                        text-align: center;
+                        color: white;
+
+                        
+                    }
+                   #one{
+                        margin-bottom: 0;
+
+                   }
+                   #two{
+                       margin-top: -8px;
+                       margin-bottom: 0;
+                   }
+                   h1{
+                        font-size: 50px;
+                   }
+                }
+                
+            }
+            #shop-mobile{
+                display: none;
+                @media only screen and (max-width: 990px){
+                    display: block;
+                    width: 100%;
+                    background-color: $primary;
+                    border: none;
+                    color: white;
+                    padding-top: 0px;
+                    margin-left: 430px;
+                    height: 50px;
+                    margin-top: 280px;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                }
+                
+                
+            }
+          
+        }
+    }
+}
+
+.products{
+    
+
+    .row{
+        // padding-left: 500px; //needs responsive
+        // padding-right: 500px;
+        .card{
+            width: 15rem;
+            border: none;
+            color: $primary;
+            @media only screen and (max-width: 990px){
+                width: 100%;
+                padding-top: 30px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .card-img-top{
+                //border-radius: 20px;
+            }
+            
+            .card-body{
+                padding: 0rem;
+                padding-top: 1rem;
+                .card-title{
+                    font-weight: 700;
+                }
+                .card-text{
+                    
+                }
+                button{
+                    font-size: 20px;
+                    border: none;
+                    //border-radius: 10px;
+                    width: 100%;
+                    padding: 7px 15px 7px 15px;
+                    font-weight: 600;
+                    color: white;
+                    background-color: $primary;
+                    &:hover{
+                        background-color: orange;
+                    }
+                }
+            }
+            
+            
+        }
+    }
+    
+}
+.categories {
+   
+    background-color: #F9F9F9;
+  
+    .categories__col {
+      height: 500px;
+      @media only screen and (max-width: 990px){
+        
+        
+        padding-left: 15px;
+        padding-right: 25px;
+    }
+      &:hover{
+          opacity: 0.5;
+      }
+      
+      img {
+        width: 100%;
+        
+        object-fit: cover;
+        
+      }
+      h2{
+          
+          background-color: rgba($primary,0.8);
+          color: black;
+          width: 100%;
+          bottom: 0;
+          text-align: center;
+          
+      }
+  
+    }
+  
+    @include media-breakpoint-up(md) {
+      .categories__col {
+        height: 336px;
+      }
+    }
+    
+  }
+
+  .shipping{
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      .row{
+        
+        .shipping__col, .autoship__col{
+            background-color: $primary;
+            font-size: 2rem;
+            border: 2px solid white;
+            
+            h1{
+                font-size: 20px;
+                font-weight: 800;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+        .autoship__col{
+            
+            background-color: rgb(0, 119, 255);
+        }
+      }
+     
+  }
+ 
+  #wrapper-footer{
+
+      #footer,#footer-mobile{
+        background-color: $primary;
+        .container{
+            .row{
+                .about, .company, .signup{
+                    h2{
+                        color: white;
+                        font-weight: 700;
+                    }
+                    ul{
+                        list-style: none;
+                        color: white;
+                        //margin-block-start: 0em;
+                        padding-inline-start: 0px;
+                        li{
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                        }
+                    }
+                   
+                }
+                .signup{
+                    
+                    p{
+                        color: white;
+                    }
+                    input{
+                        width: 100%;
+                        border-radius: 20px;
+                        border: none;
+                        padding: 10px 20px 10px 20px;
+                    }
+                    input:focus{
+                        outline: none;
+                    }
+                    .bi{
+                        background-color: white;
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                        padding-left: 19px;
+                        padding-right: 19px;
+                        font-size: 2rem;
+                        margin-right: 20px;
+                        color: $primary;
+                    }
+            
+                }
+            }
+        }
+      }
+      #footer{
+          margin-top: -25px;
+        @media only screen and (max-width: 990px){
+            display:none;
+        }
+      }
+      #footer-mobile{
+            margin-top: -25px;
+            display: none;
+            @media only screen and (max-width: 990px){
+                display:block;
+            }
+            .container{
+                .row{
+                    .signup{
+                        input{
+                            margin-top: 2rem;
+                        }
+                        .socials{
+                            padding-bottom: 3rem;
+                        }
+                    }
+                }
+            }
+      }
+      
+  }
