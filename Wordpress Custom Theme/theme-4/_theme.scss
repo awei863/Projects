@@ -1,0 +1,772 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+$color1: #C5AB5E;
+$color2: #292D2F;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+.nav{
+    //background-color: rgba(#C5AB5E,0.8);
+    // background-color: $color1;
+    // border-top: 5px solid gold;
+    // border-bottom: 5px solid gold;
+    position: absolute;
+    padding-top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    
+    .container{
+        max-width: 1200px;
+       
+        .navbar{
+            font-family: 'Source Sans Pro';
+            //position: absolute;
+            
+           
+            .navbar-brand{
+                font-family: 'playfair display';
+                color: white;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            button{
+                background-color: $color1;
+                
+            }
+            .navbar-nav{              
+                font-size: 16px;
+                //position: absolute;
+                margin-left: auto;
+                //margin-left: 300px;
+                // @media(max-width:$xxl){
+                //     margin-left: 300px;
+                //     font-size: 14px;
+                // }
+                @media(max-width:$xl){
+                    
+                    font-size: 14px;
+                }
+                @media(max-width:$lg){
+                    position: absolute;
+                    
+                }
+                
+                .nav-item{
+                    a{
+                        
+                        padding: 6px 12px;
+                        font-weight: 700;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        color: white;
+                    }
+                }
+                .blog{
+                    a{
+                        margin-right: 25px;
+                    }
+                }
+                .contact{
+                    border: 2px solid gold;
+                    a{
+                        padding: 4px 12px;
+                        
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}
+
+
+
+.banner{
+    
+    .jumbotron{
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(../imgs/banner1.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 48px 60px !important;
+        min-height: 1180px !important;
+        .container{
+            
+            h1{
+                font-family: 'playfair display';
+                font-size: 52px;
+                color: white;
+                font-weight: 700;
+                margin-bottom: 50px;
+            }
+            button{
+                
+                font-family: 'source sans pro';
+                background-color: $color1;
+                padding: 13px 34px;
+                margin: 4px;
+                font-size: 18px;
+                
+                border: none;
+                color: white;
+            }
+        }
+    }
+}
+
+.about{
+    background-image: url('../imgs/background1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 700px;
+    @media(max-width:$lg){
+        margin-bottom: 50px;
+        
+    }
+    .container{
+        
+        .row{
+            
+            .pic{
+                margin-top: 100px;
+              
+                
+                
+            }
+            .text{
+                margin-left: 20px;
+                margin-top: 100px;
+                border-left: 2px solid black;
+                padding-left: 45px;
+                h1{
+                    font-family: 'Mr De Haviland', cursive;
+                    font-size: 72px;
+                    font-weight: 600;
+                }
+                p{
+                    font-family: 'source sans pro';
+                    font-size: 16px;
+                    line-height: 1.8;
+                    letter-spacing: 0.25px;
+                }
+                button{
+                    font-family: 'source sans pro';
+                    background-color: $color1;
+                    padding: 13px 34px;
+                    margin: 4px;
+                    font-size: 18px;
+                    
+                    border: none;
+                    color: white;
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+// https://assets.thesparksite.com/uploads/sites/2493/2021/02/davis-800x500.png
+// https://assets.thesparksite.com/uploads/sites/2493/2021/02/campus-commons-sacramento-800x500.png
+.areas{
+    
+    .row{
+        font-family: 'source sans pro';
+        
+        .col-xl-3{
+            
+            padding-right: 0px;
+            padding-left: 0px;
+            background-color: #292D2F;
+            @media(max-width:$xl){
+                height: 250px;
+            }
+            @media(max-width:$md){
+                height: 280px;
+            }
+            .container{
+                padding-left: 50px;
+                padding-top: 50px;
+                padding-right: 50px;
+                
+                h2{
+                    color: $color1;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 18px;
+                    letter-spacing: 2px;
+                    
+                }
+                h1{
+                    color: white;
+                    font-size: 38px;
+                    font-weight: 700;
+                }
+                button{
+                    font-size: 15px;
+                    font-family: 'source sans pro';
+                    background: $color1;
+                    color: white;
+                    padding: 16px 34px;
+                    margin-top: 260px;
+                    border: none;
+                    @media(max-width:$xl){
+                        margin-top: 0px;
+                    }
+                    
+                }
+            }
+        }
+        .col-xl-9{
+            padding-left: 0px;
+            padding-right: 0px;
+            //background-color: #292D2F;
+            .carousel{
+                .controls{
+                    a{
+                        color: #292D2F;
+                        font-size: 26px;
+                        background-color: white;
+                        z-index: 100;
+                        width: 85px;
+                        height: 85px;
+                        border-radius: 50%;
+                        padding: 30px;
+                        margin-top: 250px;
+                        margin-right: 50px;
+                        margin-left: -45px;
+                        @media(max-width:$xl){
+                            margin-left: 50px;
+                        }
+                        @media(max-width:$sm){
+                            font-size: 18px;
+                            padding: 20px;
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+                .carousel-indicators{
+                    li{
+                        width: 60px;
+                        height: 10px;
+                        background-color: $color2;
+                    }
+                }
+                .carousel-inner{
+                    .carousel-item{
+                        .row{
+                            margin-left: 0px;
+                            margin-right: 0px;
+                            .col-md-4{
+                                padding-left: 0px;
+                                padding-right: 0px;
+                                .map1{
+                                    background:linear-gradient(to top, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://assets.thesparksite.com/uploads/sites/2493/2021/02/davis-800x500.png');
+                                }
+                                .map2{
+                                    background:linear-gradient(to top, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://assets.thesparksite.com/uploads/sites/2493/2021/02/campus-commons-sacramento-800x500.png');
+                                }
+                                .map1,.map2{
+                                    
+                                   
+                                    background-size: cover;
+                                    height: 550px;
+                                    margin-bottom: 0px !important;
+                                    .container{
+                                        padding-left: 50px;
+                                        padding-top: 50px;
+                                        padding-right: 50px;
+                                        
+                                        h2{
+                                            color: $color1;
+                                            font-size: 14px;
+                                            font-weight: 700;
+                                            line-height: 18px;
+                                            letter-spacing: 2px;
+                                            
+                                        }
+                                        h1{
+                                            color: white;
+                                            font-size: 38px;
+                                            font-weight: 700;
+                                        }
+                                        button{
+                                            font-family: 'source sans pro';
+                                            font-size: 15px;
+                                            background: $color2;
+                                            color: white;
+                                            padding: 16px 34px;
+                                            margin-top: 300px;
+                                            border: none;
+                                        }
+                                    }
+                                    
+                                    
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.listings{
+    .button{
+        display: flex;
+        justify-content: center;
+        border: none;
+        button{
+            font-family: 'source sans pro';
+            font-size: 15px;
+            background: $color1;
+            color: white;
+            padding: 16px 34px;
+            border: none;
+            margin-top: 50px;
+           
+        }
+
+    }
+    .title{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        
+        h2{
+            font-family: 'playfair display';
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 0.75px;
+        }
+
+    }
+    .carousel{
+        .controls{
+            a{
+                color: #292D2F;
+                font-size: 26px;
+                background-color: white;
+                z-index: 100;
+                width: 85px;
+                height: 85px;
+                border-radius: 50%;
+                padding: 30px;
+                margin-top: 200px;
+                margin-right: 50px;
+                margin-left: 50px;
+                @media(max-width:$sm){
+                    font-size: 18px;
+                    padding: 20px;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+        // .carousel-indicators{
+        //     li{
+        //         width: 60px;
+        //         height: 10px;
+        //         background-color: $color2;
+        //     }
+        // }
+        .carousel-inner{
+            .carousel-item{
+                .row{
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    .col-lg{
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        .map1{
+                            background:linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,1)), url('https://showcase-thumbs-showcase.netdna-ssl.com/400x272/mediarem.metrolist.net/metrolist/listingpics/bigphoto/2021/08/18/84bd55f2-5bef-4835-82be-f3e44c09fee7.jpg');
+                        }
+                        .map2{
+                            background:linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,1)), url('https://showcase-thumbs-showcase.netdna-ssl.com/400x272/mediarem.metrolist.net/metrolist/listingpics/bigphoto/2021/02/03/38850229-bff6-4872-83db-eeb529540d9b.jpg');
+                        }
+                        .map1,.map2{
+                            
+                           
+                            background-size: cover;
+                            height: 450px;
+                            margin-bottom: 0px !important;
+                            .container{
+                                padding-left: 50px;
+                                padding-top: 50px;
+                                padding-right: 50px;
+                                height: 450px;
+                               h1{
+                                   display: block;
+                                   position: absolute;
+                                   background-color: $color1;
+                                   color: white;
+                                   font-family: 'source sans pro';
+                                   font-weight: 600;
+                                   font-size: 18px;                                   
+                                   top: 5%;                                 
+                                   left: 20px;
+                                   padding: 10px 20px;
+                               }
+                               div{
+                                   display: block;
+                                   position: absolute;
+                                   bottom: 0;
+                                   left: 20px;
+                                    h2{
+                                        display: block;
+                                        font-family: 'source sans pro';
+                                        font-size: 16px;
+                                        
+                                        padding-bottom: 4px;
+                                        color: white;
+                                }
+                               }
+                               
+                            }
+                            
+                            
+                        }
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+}
+//https://assets.thesparksite.com/uploads/sites/2493/2021/02/pexels-pixabay-262048-1.jpg
+.info{
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('https://assets.thesparksite.com/uploads/sites/2493/2021/02/pexels-pixabay-262048-1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 700px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    .container{
+        .row{
+            .col-md{
+                background: rgba(255, 255, 255, 0.9);
+                padding: 72px;
+                margin: 20% 15px;
+                @media(max-width:$md){
+                    padding: 36px;
+                    text-align: center;
+                    margin-top: 2rem!important;
+                    margin-bottom: 1rem!important;
+                }
+                @media(max-width:$sm){
+                    padding: 36px;
+                    text-align: center;
+                    margin-top: 2rem!important;
+                    margin-bottom: 2rem!important;
+                }
+                h1{
+                    font-family: 'playfair display';
+                    font-size: 28px;
+                    font-weight: 900;
+                    margin: 0 0 24px;
+                    letter-spacing: 0.75px;
+                }
+                p{
+                    font-family: 'source sans pro';
+                    font-size: 16px;
+                    margin: 0 0 16px;
+                }
+                button{
+                    font-family: 'source sans pro';
+                    font-size: 15px;
+                    background: $color1;
+                    color: white;
+                    padding: 16px 34px;
+                    border: none;
+                    
+                }
+            }
+        }
+    }
+}
+
+.service{
+    .container{
+        h1{
+            font-family: 'playfair display';
+            font-size: 52px;
+            font-weight: 900;
+            letter-spacing: 0.75px;
+            margin-top: 50px;
+            margin-bottom: 70px;
+            @media(max-width:$sm){
+                font-size: 32px;
+            }
+        }
+        .row{
+            margin-bottom: 50px;
+            .service-info{
+                img{
+                    margin-bottom: 50px;
+                }
+                h2{
+                    font-family: 'playfair display';
+                    font-size: 32px;
+                    font-weight: 900;
+                    letter-spacing: 0.75px;
+                    margin-bottom: 16px;
+                }
+                p{
+                    font-family: 'source sans pro';
+                    font-size: 16px;
+                    line-height: 1.8;
+                    letter-spacing: 0.25px;
+                    margin: 0 0 16px;
+                }
+            }
+        }
+        .button1{
+            button{
+                font-family: 'source sans pro';
+                font-size: 15px;
+                background: $color1;
+                color: white;
+                padding: 16px 34px;
+                border: none;
+            }
+        }
+    }
+}
+
+.news{
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('https://assets.thesparksite.com/uploads/sites/2493/2021/02/2816601467e2760e3-1.jpg');
+    //background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 600px;
+    margin-top: 100px;
+    font-family: 'source sans pro';
+    .container{
+        .row{
+            flex-wrap: nowrap;
+            @media(max-width:$lg){
+                flex-wrap: wrap;
+            }
+            .news-info{
+                margin-top: 0;
+                @media(max-width:$lg){
+                    min-height: 300px;
+                    
+                }
+                h2{
+                    font-family: 'playfair display';
+                    font-size: 32px;
+                    font-weight: 900;
+                    color: white;
+                }
+                hr{
+                    border-top: 2px solid $color1;
+                    border-top-color: $color1;
+                    width: 75px;
+                }
+                p{
+                    font-size: 16px;
+                    color: white;
+                }
+                button{
+                    font-size: 15px;
+                    background: $color1;
+                    color: white;
+                    padding: 16px 34px;
+                    border: none;
+                    @media(max-width:$lg){
+                        width: 20%;   
+                    }
+                    @media(max-width:$md){
+                        width: 30%;   
+                    }
+                }
+            }
+            .card-info{
+                @media(max-width:$lg){
+                    display: flex;
+                    flex-direction: column;                  
+                    align-items: center;
+                    
+                }
+                .card{
+                    border: none;
+                    border-radius: 0;
+                    width:270px;
+                    height: 420px;
+                    @media(max-width:$lg){
+                        width: 100%;
+                        margin-bottom: 55px;
+                        
+                    }
+                    
+                    .card-body{
+                        //min-height: 250px;
+                        
+                        
+                        h5{
+                            font-size: 20px;
+                            font-family: 'playfair display';
+                            color: $color1;
+                            font-weight: 900;
+                            margin-top: 20px;
+                            
+                            
+                        }
+                        p{
+                            font-size: 14px;
+                            line-height: 1.8;
+                            letter-spacing: 0.25px;
+                            margin-top: 20px;
+                        }
+                    }
+                    img{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.subscribe{
+    font-family: 'source sans pro';
+    margin-top: 100px;
+    margin-bottom: 100px;
+    .container{
+        max-width: 600px;
+        h1{
+            font-family: 'playfair display';
+            font-size: 32px;
+            font-weight: 900;
+
+        }
+        hr{
+            border-top: 2px solid $color1;
+            border-top-color: $color1;
+            width: 35px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            
+        }
+        p{
+            
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+        input{
+            border: 1px solid $color1;
+            font-size: 14px;
+            padding: 17px 10px;
+            height: 52px;
+            border-radius: 3px 0 0 3px;
+            width: 100%;
+        }
+        button{
+            background-color: $color1;
+            border: 1px solid $color1;            
+            color: white;
+            font-size: 15px;
+            padding: 17px 10px;
+            height: 52px;
+            border-radius: 3px 0 0 3px;
+            width: 100%;
+            margin-top: 25px;
+        }
+    }
+}
+
+#wrapper-footer{
+    font-family: 'source sans pro';
+    background-color: $color2;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .container{
+        max-width: 600px;
+        
+        .row{
+            @media(max-width:$md){
+                text-align: center;
+            }
+            .col-md{
+                h1{
+                    font-family: 'playfair display';
+                    font-size: 20px;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    color: $color1;
+                    margin-bottom: 12px;
+                    @media(max-width:$md){
+                        margin-top: 12px;
+                    }
+
+                }
+                ul{
+                    list-style-type: none; /* Remove bullets */
+                    padding: 0; /* Remove padding */
+                    margin: 0; /* Remove margins */
+                    li{
+                        font-size: 16px;
+                        color: white;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+        .sp-hr{
+            border-top: 2px solid $color1;
+            border-top-color: $color1;
+            
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .contact{
+            h1{
+                font-family: 'playfair display';
+                font-size: 20px;
+                text-transform: uppercase;
+                font-weight: 900;
+                color: $color1;
+                margin-bottom: 12px;
+                @media(max-width:$md){
+                    margin-top: 12px;
+                }
+            }
+            p{
+                font-size: 16px;
+                color: white;
+                margin-bottom: 5px;
+            }
+            i{
+                color: $color1;
+                font-size: 36px;
+                padding: 10px;
+                
+            }
+            .logo{
+                font-family: 'playfair display';
+                color: white;
+                font-size: 24px;
+                font-weight: 700;
+                margin-top: 12px;
+            }
+        }
+    }
+}
