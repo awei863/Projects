@@ -1,0 +1,129 @@
+body{
+    background: rgb(202, 235, 195);
+}
+
+.container{
+    margin: 100px auto;
+    max-width: 400px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container header{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.container .add{
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.container .add input{
+    outline: none;
+    width: 85%;
+    height: 100%;
+    border: 1px solid gray;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.container .add input:focus::placeholder{
+    color: transparent;
+  }
+
+.container .add button{
+    width: 50px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: rgb(47, 255, 92);
+    border-radius: 5px;
+    margin-left: 10px;
+    opacity: 0.6;
+    pointer-events: none;
+    
+}
+
+.container .add button.active{
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.container .add button i{
+    color: black;
+    font-size: 24px;
+}
+.container .list{
+    padding-left: 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.list li{
+    position: relative;
+    list-style: none;
+    line-height: 50px;
+    height: 50px;
+    background: rgb(236, 236, 236);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.list li:hover{
+    background: rgb(194, 128, 128);
+    cursor: pointer;
+}
+
+/* .list li span{
+    position: absolute;
+    right: -50px;
+    color: white;
+    background: red;
+    width: 50px;
+    text-align: center;
+    font-size: 24px;
+    border-radius:  0 5px 5px 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.list li:hover span{
+    right: 0;
+} */
+
+.container .footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.footer button{
+    border: none;
+    outline: none;
+    background: rgb(47, 255, 92);
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px 10px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.footer button.active{
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+
+
