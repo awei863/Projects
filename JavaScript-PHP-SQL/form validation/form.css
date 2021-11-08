@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+}
+
+.row{
+    width:100%;
+}
+
+
+.image{
+    background-image: url('https://wpeverest.com/blog/wp-content/uploads/2019/11/Best-Free-WordPress-Registration-Plugins.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+   
+}
+
+.register{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+
+.container{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    width: 400px;
+    max-width: 100%;
+    padding-left: none;
+    overflow: auto;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.header{
+    padding: 20px 40px;
+    
+    border-bottom: 1px solid black;
+}
+
+.header h2{
+    margin: 0;
+}
+
+.form{
+    padding: 20px 40px;
+    
+}
+
+.form-element{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-element label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-element input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-element.success input{
+    border-color: green;
+}
+
+.form-element.error input{
+    border-color: red;
+}
+
+.form-element i{
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+.form-element.success i.bi-check-circle-fill{
+    visibility: visible;
+    color: green;
+}
+
+.form-element.error i.bi-exclamation-circle-fill{
+    visibility: visible;
+    color: red;
+}
+
+.form-element small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.form-element.error small{
+    visibility: visible;
+    color: red;
+}
+
+.form button{
+    background-color: teal;
+    color: white;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.form button:hover{
+    background-color: rgb(77, 128, 128);
+}
+
+.registered{
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    visibility: hidden;
+    
+}
+
+.registered.success{
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    color: green;
+    font-size: 18px;
+    font-weight: 600;
+    visibility: visible;
+    
+    
+}
+
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    border: 5px solid blue;
+  }
+  
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+.valid {
+    color: green;
+  }
+  
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+  
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+}
+  
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
