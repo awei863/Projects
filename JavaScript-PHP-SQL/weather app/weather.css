@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #222;
+    background-image: url("https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1752&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .card {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 1em;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search input {
+    border: none;
+    outline: none;
+    padding: 0.5em 1em;
+    border-radius: 24px;
+    background-color: #7c7c7c2b;
+    font-size: 120%;
+    color: white;
+    width: calc(100% - 50px);
+  }
+  
+  .search button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 3em;
+    width: 3em;
+    outline: none;
+    background-color: #7c7c7c2b;
+    color: white;
+  }
+  
+  .search button:hover {
+    background: #7c7c7c6b;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+
+  
+  .temp {
+    margin: 0;
+  }
+  
+  .description::first-letter{
+      text-transform: uppercase;
+  }
+
+  .flex{
+      display: flex;
+      align-items: center;
+  }
+
+  .icon{
+      margin-left: -10px;
+  }
+
