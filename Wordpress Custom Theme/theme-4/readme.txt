@@ -1,4 +1,4 @@
-Window view:
+Desktop view:
 https://imgur.com/a/iJEcYr2
 
 Mobile View:
